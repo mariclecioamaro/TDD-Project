@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "tdd project"
+version = "0.0.1"
+description = ""
+authors = ["mariclecioamaro"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "Using version ^0.104.1 for fastapi"
+uvicorn = "Using version ^0.24.0.post1 for uvicorn"
+pydantic = "Using version ^2.5.1 for pydantic"
+pydantic-settings = "Using version ^2.1.0 for pydantic-settings"
+motor = "3.3.1"
+0 = "Using version ^7.4.3 for pytest"
+pytest-asyncio = "Using version ^0.21.1 for pytest-asyncio"
+pre-commit = "Using version ^3.5.0 for pre-commit"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+adsopts = [
+    "--strict-config"
+    "--strict-markers"
+    "--ignore-docs_src"
+]
+xfail_strict = true
+junit_family = "xunit2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
